@@ -35,8 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc,curr) => ({price: acc.price + curr.price}))
 
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +55,12 @@ const cart = [
 */
 
 //CODE HERE
-
-
+const calcFinalPrice = (cartTotal, cuponValue, tax) => {
+    let cartTaxed = (cartTotal * (1 - tax))
+    let cartCuponed = (cartTaxed - cuponValue)
+    return cartCuponed
+}
+console.log(calcFinalPrice(100, 10, .06))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +84,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+    A customer ojbect should containg: Name(to identify the customer), Bill(what their meal total is),
+    Discount(if the customer has any discounts and an object contatining those potentions/applied
+    dicounts (i.e. military, senior), Coupon and an object denoting if they do or dont and their total
+    (if the customer has any coupons)
 */
 
 /*
@@ -88,3 +96,9 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    Name: 'Laramie', 
+    Bill: 125, 
+    Discount: {Military: .1, Senior: 0}, 
+    Coupon: {Yes: 10, No: 0}
+}

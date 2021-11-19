@@ -202,23 +202,37 @@ console.log(filteredFood)
 
 //CODE HERE
 const filterByProperty = (property, number, type) => {
+    let heldMenuItems = []
+        if(type === 'above'){
+            foodArr.forEach(element => { 
+            if(foodArr.property > number){
+                heldMenuItems = foodArr.filter(property => {
+                    return 
+                })
+            }
+        })
+        return heldMenuItems
+        }
 
+        if(type === 'below'){
+            foodArr.forEach(element => { 
+                if(foodArr.property < number){
+                    heldMenuItems = foodArr.filter(element)
+                }
+            })
+            return heldMenuItems
+        }
 }
 
 
-filterByProperty('popularity', 9, type => {
-    if(type === 'above'){
-        return
-    }
-    if(type === 'below'){
-        return
-    }
-})
 /*
-    Invoke the `filterByProperty` function passing
-    in a value for each paramter.
+Invoke the `filterByProperty` function passing
+in a value for each paramter.
 
-    You'll have to console.log to see the filtered array
+You'll have to console.log to see the filtered array
 */
 
 //CODE HERE
+console.log(filterByProperty('popularity', 9, 'above'))
+
+//If type = 'above', i want to pull all menu items with a popularitys above 9.
