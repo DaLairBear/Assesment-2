@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: 'Hawaiian',
+    price: 12,
+    category: 'Entree',
+    popularity: 10,
+    rating: 5,
+    tags: ['Pinapple', 'Cheese', 'Ham']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+const pizzaPrice = pizza.price
+console.log(pizzaPrice)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+const pizzaCategory = pizza.category
+console.log(pizzaCategory)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +97,47 @@
 */
 
 //CODE HERE
+const foodArr = [
+    {   name: 'Pepperoni',
+        price: 10,
+        category: 'Entree',
+        popularity: 9,
+        rating: 4.5,
+        tags: ['Cheese', 'Pepperoni'],
+    },
 
+    {   name: 'Meat Lovers',
+        price: 15,
+        category: 'Entree',
+        popularity: 9,
+        rating: 4.6,
+        tags: ['Sausage', 'Cheese', 'Ham', 'Pepperoni'],
+    },
+
+    {   name: 'Cheese Bread',
+        price: 10,
+        category: 'Appetizer',
+        popularity: 10,
+        rating: 4.8,
+        tags: ['Garlic', 'Cheese', 'Herbs'],
+    },
+
+    {   name: 'Cinnimon Bread',
+        price: 11,
+        category: 'Dessert',
+        popularity: 10,
+        rating: 4.9,
+        tags: ['Cinnimon', 'Sugar', 'Icing'],
+    },
+
+    {   name: 'Salad',
+        price: 8,
+        category: 'Side',
+        popularity: 7,
+        rating: 4,
+        tags: ['Lettuce', 'Dressing', 'Tomatoes', 'Onions', 'Black Olives'],
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,9 +154,12 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(tag => {
+    return tag.tags.includes('Cheese')
+})
 
 
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -141,7 +193,7 @@
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
@@ -149,8 +201,19 @@
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+
+}
 
 
+filterByProperty('popularity', 9, type => {
+    if(type === 'above'){
+        return
+    }
+    if(type === 'below'){
+        return
+    }
+})
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.

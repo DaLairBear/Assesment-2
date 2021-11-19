@@ -24,7 +24,7 @@
 //CODE HERE
 const greetUser = username => console.log(`Welcome back, ${username}`)
 
-//greetUser('Andrew')
+greetUser('Andrew')
 
 
 //////////////////PROBLEM 2////////////////////
@@ -57,8 +57,8 @@ const canWeDeliver = zipCode => {
         console.log(`Sorry, we can't deliver to that address`)
     }
 }
-//canWeDeliver(84606)
-//canWeDeliver(85205)
+canWeDeliver(84606)
+canWeDeliver(85205)
 
 /* 
     Problem 2 Continued
@@ -87,8 +87,8 @@ const canWeDeliverTwo = zipCode => {
     }
     console.log(`Sorry, we can't deliver to that address`)
 }
-// canWeDeliverTwo(84606)
-// canWeDeliverTwo(85205)
+canWeDeliverTwo(84606)
+canWeDeliverTwo(85205)
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -123,7 +123,7 @@ const deals = [
 */
 
 //CODE HERE
-//console.log(deals[0].title.replace('15', '10'))
+console.log(deals[0].title.replace('15', '10'))
 
 
 /*
