@@ -202,27 +202,15 @@ console.log(filteredFood)
 
 //CODE HERE
 const filterByProperty = (property, number, type) => {
-    let heldMenuItems = []
+    const heldMenuItems = foodArr.filter((element) => {
         if(type === 'above'){
-            foodArr.forEach(element => { 
-            if(foodArr.property > number){
-                heldMenuItems = foodArr.filter(property => {
-                    return 
-                })
-            }
-        })
-        return heldMenuItems
+            return element[property] > number
+        }else if(type === 'below'){
+            return element[property] < number
         }
-
-        if(type === 'below'){
-            foodArr.forEach(element => { 
-                if(foodArr.property < number){
-                    heldMenuItems = foodArr.filter(element)
-                }
-            })
-            return heldMenuItems
-        }
-}
+    })
+    return heldMenuItems
+ }
 
 
 /*
